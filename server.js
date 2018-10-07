@@ -10,7 +10,7 @@ const eliapi = require('./eliapi.js');
 
 let materials = {};
 
-let clicks = 1;
+let clicks = 0;
 materials.water = 0;
 materials.earth = 0;
 materials.fire = 0;
