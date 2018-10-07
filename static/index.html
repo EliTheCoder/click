@@ -2,18 +2,27 @@
 <html>
   <head>
     <title>Eli's Clicker Game</title>
+    <link rel="stylesheet" href="uikit.min.css">
   </head>
   <body>
-    <center>
-      <button id="button" onclick="clickit()">Loading..</button>
-      <p>Water: </p><p id="water">Loading..</p>
-      <br />
-      <p>Earth: </p><p id="earth">Loading..</p>
-      <br />
-      <p>Fire: </p><p id="fire">Loading..</p>
-      <br />
-      <p>Air: </p><p id="air">Loading..</p>
-    </center>
+    <div class="uk-grid">
+      <div class="uk-width-1-4">
+          <h2>Water:</h2>
+          <p>36</p>
+      </div>
+      <div class="uk-width-1-4">
+          <h2>Earth:</h2>
+          <p>35</p>
+      </div>
+      <div class="uk-width-1-4">
+          <h2>Fire:</h2>
+          <p>32</p>
+      </div>
+      <div class="uk-width-1-4">
+          <h2>Air:</h2>
+          <p>32</p>
+      </div>
+    </div>
     <footer>Copyright &copy; 2018 Eli Frigo</footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
     <script src="main.js"></script>
