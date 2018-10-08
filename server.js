@@ -35,12 +35,43 @@ materials.water = 0;
 materials.earth = 0;
 materials.fire = 0;
 materials.air = 0;
+materials.taurus = 0;
+materials.aries = 0;
+materials.gemini = 0;
+materials.cancer = 0;
+materials.leo = 0;
+materials.libra = 0;
+materials.scorpio = 0;
+materials.virgo = 0;
+materials.aquaries = 0;
+materials.pisces = 0;
+materials.capricorn = 0;
+materials.sagittarius = 0;
 
 app.use(express.static(path.join(__dirname, '/static')));
 
 const server = app.listen(process.env.PORT || port, () => {
   eliapi.logMessage(0, "SERVER RUNNING: PORT: " + port);
 });
+
+process.stdin.resume();
+process.stdin.setEncoding('utf8');
+
+process.stdin.on('data', function(text) {
+  if (text.trim() === 'quit') {
+    done();
+  }
+  try {
+    eval(text.trim());
+  } catch(err) {
+    eliapi.logMessage(2, err.toString());
+  }
+});
+
+function done() {
+  console.log('Quiting..');
+  process.exit();
+}
 
 const io = require('socket.io')(server);
 
@@ -51,6 +82,14 @@ io.on('connection', socket => {
 
   socket.on('click', data => {
     click(data, socket);
+  });
+
+  socket.on('buy', data => {
+    if (materials[data.element] > 0) {
+      materials[data.element]--;
+      materials[data.name]++;
+      sUpdate(socket);
+    }
   });
 
 });
@@ -72,7 +111,10 @@ function randomItem() {
       rItemName = "air";
       break;
   }
-  return {num: rItemNum, name: rItemName};
+  return {
+    num: rItemNum,
+    name: rItemName
+  };
 }
 
 function sUpdate(socket) {
@@ -87,5 +129,8 @@ function click(info, socket) {
   let newItem = randomItem();
   materials[newItem.name]++;
   sUpdate(socket);
-  eliapi.logMessage(0, `clicks: ${clicks} water: ${materials.water} earth: ${materials.earth} fire: ${materials.fire} air: ${materials.air}`);
 }
+
+setInterval(() => {
+  eliapi.logMessage(0, `clicks: ${clicks} water: ${materials.water} earth: ${materials.earth} fire: ${materials.fire} air: ${materials.air}`);
+}, 30000);
