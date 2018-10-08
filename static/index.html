@@ -3,34 +3,133 @@
 
 <head>
   <title>Eli's Clicker Game</title>
-  <link rel="stylesheet" href="uikit.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.17/css/uikit.min.css" />
 </head>
 
 <body>
-  <h1 class="uk-container uk-container-center"><button class="uk-button uk-button-primary uk-width-1-1" onclick="clickit()" id="button"></button></h1>
-  <div class="uk-grid uk-grid-small uk-container-center">
-    <div class="uk-width-medium-1-4 uk-width-small-1-2 uk-container uk-container-center">
-      <h2 class="uk-container uk-container-center">Water</h2>
-      <p class="uk-container uk-container-center" id="water">36</p>
+  <h1 class="uk-container uk-container-center"><button class="uk-button uk-button-primary uk-width-1-1" onclick="clickit()" id="button">Loading..</button></h1>
+  <div class="uk-child-width-1-4@m uk-grid-small uk-grid-match" uk-grid>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body">
+        <h3 class="uk-card-title">Water</h3>
+        <p id="water">Loading..</p>
+        <button class="uk-button uk-button-default uk-width-1-1">Taurus</button>
+        <button class="uk-button uk-button-default uk-width-1-1">Aries</button>
+        <button class="uk-button uk-button-default uk-width-1-1">Gemini</button>
+      </div>
     </div>
-    <div class="uk-width-medium-1-4 uk-width-small-1-2 uk-container uk-container-center">
-      <h2 class="uk-container uk-container-center">Earth</h2>
-      <p class="uk-container uk-container-center" id="earth">35</p>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body">
+        <h3 class="uk-card-title">Earth</h3>
+        <p id="earth">Loading..</p>
+        <button class="uk-button uk-button-default uk-width-1-1">Cancer</button>
+        <button class="uk-button uk-button-default uk-width-1-1">Leo</button>
+        <button class="uk-button uk-button-default uk-width-1-1">Libra</button>
+      </div>
     </div>
-    <div class="uk-width-medium-1-4 uk-width-small-1-2 uk-container uk-container-center">
-      <h2 class="uk-container uk-container-center">Fire</h2>
-      <p class="uk-container uk-container-center" id="fire">32</p>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body">
+        <h3 class="uk-card-title">Fire</h3>
+        <p id="fire">Loading..</p>
+        <button class="uk-button uk-button-default uk-width-1-1">Scorpio</button>
+        <button class="uk-button uk-button-default uk-width-1-1">Virgo</button>
+        <button class="uk-button uk-button-default uk-width-1-1">Aquaries</button>
+      </div>
     </div>
-    <div class="uk-width-medium-1-4 uk-width-small-1-2 uk-container uk-container-center">
-      <h2 class="uk-container uk-container-center">Air</h2>
-      <p class="uk-container uk-container-center" id="air">32</p>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body">
+        <h3 class="uk-card-title">Air</h3>
+        <p id="air">Loading..</p>
+        <button class="uk-button uk-button-default uk-width-1-1">Pisces</button>
+        <button class="uk-button uk-button-default uk-width-1-1">Capricorn</button>
+        <button class="uk-button uk-button-default uk-width-1-1">Sagittarius</button>
+      </div>
     </div>
   </div>
+
+  <div class="uk-child-width-1-4@m uk-grid-small uk-grid-match" uk-grid>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body uk-card-small">
+        <h3 class="uk-card-title">Taurus</h3>
+        <p id="taurus">Loading..</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body uk-card-small">
+        <h3 class="uk-card-title">Cancer</h3>
+        <p id="cancer">Loading..</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body uk-card-small">
+        <h3 class="uk-card-title">Scorpio</h3>
+        <p id="scorpio">Loading..</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body uk-card-small">
+        <h3 class="uk-card-title">Pisces</h3>
+        <p id="pisces">Loading..</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body uk-card-small">
+        <h3 class="uk-card-title">Aries</h3>
+        <p id="aries">Loading..</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body uk-card-small">
+        <h3 class="uk-card-title">Leo</h3>
+        <p id="leo">Loading..</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body uk-card-small">
+        <h3 class="uk-card-title">Virgo</h3>
+        <p id="virgo">Loading..</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body uk-card-small">
+        <h3 class="uk-card-title">Capricorn</h3>
+        <p id="capricorn">Loading..</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body uk-card-small">
+        <h3 class="uk-card-title">Gemini</h3>
+        <p id="gemini">Loading..</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body uk-card-small">
+        <h3 class="uk-card-title">Libra</h3>
+        <p id="libra">Loading..</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body uk-card-small">
+        <h3 class="uk-card-title">Aquaries</h3>
+        <p id="aquaries">Loading..</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body uk-card-small">
+        <h3 class="uk-card-title">Sagittarius</h3>
+        <p id="sagittarius">Loading..</p>
+      </div>
+    </div>
+  </div>
+
   <footer>Copyright &copy; 2018 Eli Frigo</footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="uikit.min.js"></script>
   <script src="main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.17/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.17/js/uikit-icons.min.js"></script>
 </body>
 
 </html>
