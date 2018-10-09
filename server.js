@@ -23,10 +23,18 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 const port = 80;
 
 const express = require('express');
+const https = require('https');
 const path = require("path");
+const fs = require("fs");
 const app = express();
 const util = require('util');
 const eliapi = require('./eliapi.js');
+
+const options = {
+  ca: fs.readFileSync('keys/ca_bundle.crt'),
+  key: fs.readFileSync('keys/private.key'),
+  cert: fs.readFileSync('keys/certificate.crt')
+};
 
 let materials = {};
 
@@ -50,6 +58,8 @@ materials.sagittarius = 0;
 
 app.use(express.static(path.join(__dirname, '/static')));
 
+// https.createServer(options, app).listen(port);
+
 const server = app.listen(process.env.PORT || port, () => {
   eliapi.logMessage(0, "SERVER RUNNING: PORT: " + port);
 });
@@ -63,7 +73,7 @@ process.stdin.on('data', function(text) {
   }
   try {
     eliapi.logMessage(3, eval(text.trim()));
-  } catch(err) {
+  } catch (err) {
     eliapi.logMessage(2, err.toString());
   }
 });
