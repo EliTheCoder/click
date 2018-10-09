@@ -1,6 +1,9 @@
 td {
-    border-style: solid;
-    width: 100px;
-    height: 100px;
-    text-align: center;
+  border-style: solid;
+  text-align: center;
+}
+
+.cauldronbox {
+    width: 300px;
+    height: 300px;
 }
