@@ -62,7 +62,7 @@ process.stdin.on('data', function(text) {
     done();
   }
   try {
-    eval(text.trim());
+    eliapi.logMessage(3, eval(text.trim()));
   } catch(err) {
     eliapi.logMessage(2, err.toString());
   }
