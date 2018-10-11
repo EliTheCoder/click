@@ -7,3 +7,28 @@ td {
     width: 300px;
     height: 300px;
 }
+
+.uk-range {
+  float: inherit;
+}
+
+#s1 {
+   position: relative;
+   bottom: 860px;
+   left: 320px;
+}
+#s2 {
+   position: relative;
+   bottom: 710px;
+   left: 5px;
+}
+#s3 {
+   position: relative;
+   bottom: 550px;
+   left: -315px;
+}
+#s4 {
+   position: relative;
+   bottom: 0px;
+   left: 320px;
+}
